@@ -68,7 +68,7 @@ class HomeViewController extends GetxController {
   Rx<String> rating_name = ''.obs;
   Rx<String> description = ''.obs;
   RxList<dynamic> peculiarities = <dynamic>[].obs;
-  Rx<String> imageUrl = ''.obs;
+  // Rx<String> imageUrl = ''.obs;
 
   @override
   void onInit() {
@@ -96,7 +96,7 @@ class HomeViewController extends GetxController {
         rating.value = jsonResult['rating'];
         rating_name.value = jsonResult['rating_name'];
         description.value = jsonResult['about_the_hotel']['description'];
-        imageUrl.value = jsonResult['image_urls'];
+        // imageUrl.value = jsonResult['image_urls'];
 
         // Проверяем, что "peculiarities" - это список, прежде чем присваивать значение
         final peculiaritiesList =

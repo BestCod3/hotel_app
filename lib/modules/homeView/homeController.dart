@@ -68,6 +68,15 @@ class HomeViewController extends GetxController {
   Rx<String> rating_name = ''.obs;
   Rx<String> description = ''.obs;
   RxList<dynamic> peculiarities = <dynamic>[].obs;
+  RxList<String> listItems =
+      ['Удобство', 'Что включено', 'Что не включено'].obs;
+
+  RxList<String> listIcon = [
+    'assets/images/emoji-happy.svg',
+    'assets/images/tick-square.svg',
+    'assets/images/close-square.svg'
+  ].obs;
+
   // Rx<String> imageUrl = ''.obs;
 
   @override

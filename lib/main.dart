@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:hotel_app/modules/bookView/bookView.dart';
 import 'package:hotel_app/modules/homeView/homeView.dart';
 
 void main() {

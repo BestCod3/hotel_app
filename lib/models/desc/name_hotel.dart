@@ -3,9 +3,8 @@ import 'package:get/get.dart';
 import 'package:hotel_app/modules/homeView/homeController.dart';
 
 class name_hotel extends StatelessWidget {
-  name_hotel({
-    super.key,
-  });
+  name_hotel({super.key, required this.text});
+  final String text;
   HomeViewController _homeController = Get.put(HomeViewController());
 
   @override
@@ -15,8 +14,8 @@ class name_hotel extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const Text(
-            "Steigenberger Makadi",
+          Text(
+            text,
             textAlign: TextAlign.left,
             style: TextStyle(fontSize: 22, fontWeight: FontWeight.w500),
           ),

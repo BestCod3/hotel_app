@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:get/get.dart';
 import 'package:hotel_app/appBar/appBar.dart';
 import 'package:hotel_app/models/desc/description_list.dart';
 import 'package:hotel_app/models/desc/text_information.dart';
+import 'package:hotel_app/modules/bookView/bookView.dart';
 
 class FinalView extends StatelessWidget {
   const FinalView({Key? key}) : super(key: key);
@@ -10,7 +12,10 @@ class FinalView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: CustomAppBar(height: 60, text: "Заказ оплачен"),
+        appBar: CustomAppBar(
+          height: 60,
+          text: "Заказ оплачен",
+        ),
         body: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,

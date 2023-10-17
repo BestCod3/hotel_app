@@ -11,7 +11,7 @@ import 'package:hotel_app/modules/chooseView/chooseView.dart';
 import 'package:hotel_app/modules/homeView/homeController.dart';
 import 'package:hotel_app/widgets/CarouselImage.dart';
 import 'package:http/http.dart' as http;
-import '../../appBar/appBar.dart';
+
 import '../../models/desc/description_list.dart';
 import '../../models/desc/item_category.dart';
 import '../../models/desc/list_items_infor.dart';
@@ -28,9 +28,16 @@ class HomeView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       extendBodyBehindAppBar: false,
-      appBar: CustomAppBar(
-        height: 60,
-        text: 'Отель',
+      appBar: AppBar(
+        elevation: 0,
+        title: const Center(
+          child: Text(
+            "Отель",
+            style: TextStyle(
+                fontSize: 18, fontWeight: FontWeight.w500, color: Colors.black),
+          ),
+        ),
+        backgroundColor: Colors.white,
       ),
       backgroundColor: const Color.fromARGB(255, 238, 237, 237),
       body: SingleChildScrollView(
@@ -97,7 +104,7 @@ class HomeView extends StatelessWidget {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    Item_category(
+                    const Item_category(
                       text: 'Об отеле',
                     ),
                     container_description_list(
@@ -108,7 +115,7 @@ class HomeView extends StatelessWidget {
                       padding: const EdgeInsets.all(25.0),
                       child: Text(
                         _homeController.description.value,
-                        style: TextStyle(
+                        style: const TextStyle(
                             fontSize: 16, fontWeight: FontWeight.w400),
                       ),
                     ),

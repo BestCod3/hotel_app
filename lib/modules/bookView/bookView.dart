@@ -6,6 +6,7 @@ import 'package:hotel_app/models/desc/item_category.dart';
 import 'package:hotel_app/models/desc/name_hotel.dart';
 import 'package:hotel_app/modules/bookView/BookController.dart';
 import 'package:hotel_app/modules/bookView/addAnimated.dart';
+import 'package:hotel_app/modules/chooseView/chooseView.dart';
 import 'package:hotel_app/modules/finalView/finalView.dart';
 import 'package:hotel_app/modules/homeView/homeController.dart';
 
@@ -27,7 +28,13 @@ class BookView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 238, 237, 237),
-      appBar: CustomAppBar(height: 60, text: "Бронирование"),
+      appBar: CustomAppBar(
+        height: 60,
+        text: "Бронирование",
+        onPressed: () {
+          Get.back(result: ChooseView());
+        },
+      ),
       body: Padding(
         padding: const EdgeInsets.symmetric(vertical: 10),
         child: SingleChildScrollView(

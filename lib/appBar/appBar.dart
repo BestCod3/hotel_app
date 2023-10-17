@@ -4,24 +4,25 @@ import 'package:hotel_app/modules/chooseView/chooseView.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   final double height;
-  CustomAppBar({
-    super.key,
-    required this.height,
-    required this.text,
-  });
+  CustomAppBar(
+      {super.key,
+      required this.height,
+      required this.text,
+      required this.onPressed});
   final String text;
-  // void Function() onPressed;
+  void Function() onPressed;
 
   @override
   Widget build(BuildContext context) {
     return AppBar(
       elevation: 0,
-      // leading: IconButton(
-      //     onPressed: onPressed,
-      //     icon: Icon(
-      //       Icons.arrow_back_ios_new,
-      //       color: Colors.black,
-      //     )),
+      leading: IconButton(
+          onPressed: onPressed,
+          icon: Icon(
+            Icons.arrow_back_ios_new,
+            size: 18,
+            color: Colors.black,
+          )),
       title: Center(
         child: Text(
           text,

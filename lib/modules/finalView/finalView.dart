@@ -13,6 +13,9 @@ class FinalView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: CustomAppBar(
+          onPressed: () {
+            Get.back(result: BookView());
+          },
           height: 60,
           text: "Заказ оплачен",
         ),

@@ -8,6 +8,7 @@ import 'package:hotel_app/models/desc/price_text.dart';
 import 'package:hotel_app/modules/bookView/bookView.dart';
 import 'package:hotel_app/modules/chooseView/chooseController.dart';
 import 'package:hotel_app/modules/chooseView/chooseController2.dart';
+import 'package:hotel_app/modules/homeView/homeView.dart';
 import 'package:hotel_app/widgets/Button.dart';
 
 import '../../widgets/CarouselImage.dart';
@@ -37,7 +38,13 @@ class _ChooseViewState extends State<ChooseView> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color.fromARGB(255, 238, 237, 237),
-      appBar: CustomAppBar(height: 60, text: 'Steigenberger Makadi'),
+      appBar: CustomAppBar(
+        height: 60,
+        text: 'Steigenberger Makadi',
+        onPressed: () {
+          Get.back(result: HomeView());
+        },
+      ),
       body: Padding(
         padding: const EdgeInsets.symmetric(vertical: 10),
         child: SingleChildScrollView(
@@ -95,7 +102,11 @@ class _ChooseViewState extends State<ChooseView> {
                     Price_text(
                         text1: '${_chooseController.price.value} ₽',
                         text2: _chooseController.price_per.value),
-                    Button(onTap: () {}, text: "Выбрать номер")
+                    Button(
+                        onTap: () {
+                          Get.to(BookView());
+                        },
+                        text: "Выбрать номер")
                   ],
                 ),
               ),
